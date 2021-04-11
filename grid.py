@@ -1,4 +1,6 @@
 class Grid:
+    sess_id = 0
+    
     def __init__(self, instance_id) -> None:
         self.instance_id = instance_id
         self.grid_size = [0,0]
@@ -14,7 +16,6 @@ class Grid:
     def grid_init(self):
         self.grid_active = True
 
-    def simulation_parameters(self, params_list:dict):
+    def set_simulation_parameters(self, params_list:dict):
         if len(params_list) > 0:
-            self.session_params = params_list
-        pass
+            self.session_paramsx.update(params_list)
